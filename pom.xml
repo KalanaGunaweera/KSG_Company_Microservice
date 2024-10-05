@@ -4,6 +4,36 @@
   <groupId>org.KSG_Company</groupId>
   <artifactId>KSG_Company</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.3.4</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+  <packaging>pom</packaging>
   <name>Archetype - KSG_Company</name>
   <url>http://maven.apache.org</url>
+  <modules>
+    <module>Order</module>
+    <module>Product</module>
+    <module>Inventory</module>
+  </modules>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+            </exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
