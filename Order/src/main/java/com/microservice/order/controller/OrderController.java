@@ -1,6 +1,8 @@
 package com.microservice.order.controller;
 
+import com.microservice.order.common.OrderResponse;
 import com.microservice.order.dto.OrderDTO;
+import com.microservice.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,6 +12,7 @@ import java.util.List;
 @CrossOrigin
 @RequestMapping("api/v1/")
 public class OrderController {
+
     @Autowired
     private OrderService orderService;
 
@@ -24,7 +27,7 @@ public class OrderController {
     }
 
     @PostMapping("/addorder")
-    public OrderDTO addOrder(@RequestBody OrderDTO orderDTO){
+    public OrderResponse addOrder(@RequestBody OrderDTO orderDTO){
         return orderService.saveOrder(orderDTO);
     }
 
