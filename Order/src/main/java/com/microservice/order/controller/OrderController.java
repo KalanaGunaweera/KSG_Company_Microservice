@@ -1,7 +1,6 @@
 package com.microservice.order.controller;
 
 import com.microservice.order.dto.OrderDTO;
-import com.microservice.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -41,5 +41,24 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+            <version>3.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.KSG_Company</groupId>
+            <artifactId>Inventory</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.KSG_Company</groupId>
+            <artifactId>Product</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+
+
     </dependencies>
 </project>

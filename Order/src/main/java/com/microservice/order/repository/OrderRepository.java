@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 @EnableJpaRepositories
 public interface OrderRepository extends JpaRepository<Order, Integer> {
-    @Query(value = "SELECT * FROM order WHERE id = ?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM order WHERE orderId = ?1", nativeQuery = true)
     Order getOrderById(Integer orderId);
 
 }
